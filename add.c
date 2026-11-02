@@ -12,9 +12,10 @@ int addbook(void)
     fgets(name, sizeof(name), stdin);
     name[strcspn(name, "\n")] = 0;
     fgets(leibie, sizeof(leibie), stdin);  
-    leibie[strcspn(leibie, "\n")] = 0; // 
+    leibie[strcspn(leibie, "\n")] = 0;
     scanf("%d", &count);
     FILE *fp = fopen("book.txt", "a");
     fprintf(fp, "\n %s %s %d\n", name, leibie, count);
     fclose(fp);
+
 }
